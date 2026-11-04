@@ -1,34 +1,59 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سعد الشهري - مطور iOS</title>
+    <title>Saad Alshehri - Developer Hub</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "SF Arabic", system-ui, sans-serif; line-height: 1.6; padding: 40px 20px; max-width: 800px; margin: auto; background-color: #f9f9f9; color: #333; text-align: center; position: relative; }
-        h1 { color: #111; }
-        .app-card { background: white; padding: 20px; border-radius: 12px; margin-top: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-align: right; }
-        .app-card h2 { margin-top: 0; color: #008F59; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; padding: 20px; max-width: 1200px; margin: auto; background-color: #f9f9f9; color: #333; }
+        
+        /* The Two-Column Grid */
+        .bilingual-container { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 20px; }
+        @media (max-width: 768px) { .bilingual-container { grid-template-columns: 1fr; } }
+        
+        /* English Side (Left) */
+        .col-en { direction: ltr; text-align: left; }
+        
+        /* Arabic Side (Right) */
+        .col-ar { direction: rtl; text-align: right; font-family: "SF Arabic", system-ui, sans-serif; border-left: 2px solid #ddd; padding-left: 40px; }
+        @media (max-width: 768px) { .col-ar { border-left: none; border-top: 2px solid #ddd; padding-left: 0; padding-top: 40px; } }
+        
+        h1 { color: #111; font-size: 1.5rem; }
+        .app-card { background: white; padding: 20px; border-radius: 12px; margin-top: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .app-card h2 { margin-top: 0; color: #008F59; font-size: 1.2rem; }
         a { color: #008F59; text-decoration: none; font-weight: bold; }
         a:hover { text-decoration: underline; }
-        .lang-switch { position: absolute; top: 20px; left: 20px; font-size: 14px; }
     </style>
 </head>
 <body>
-    <div class="lang-switch">
-        <strong>العربية</strong> | <a href="index.html">English</a>
-    </div>
+    <div class="bilingual-container">
+        <!-- ENGLISH COLUMN -->
+        <div class="col-en">
+            <h1>Saad Alshehri</h1>
+            <p>Building iOS applications.</p>
+            <p>Contact: <a href="mailto:saadalshehri91@gmail.com">saadalshehri91@gmail.com</a></p>
 
-    <h1>مرحباً بك في منصة المطور سعد الشهري</h1>
-    <p>أقوم ببناء تطبيقات iOS متميزة للياقة البدنية والصحة والإنتاجية.</p>
-    <p>للتواصل: <a href="mailto:saadalshehri91@gmail.com">saadalshehri91@gmail.com</a></p>
+            <h2 style="margin-top: 30px;">My Apps</h2>
+            <div class="app-card">
+                <h2>Mizan: Fitness & Health</h2>
+                <p>A premium fitness tracker with full Arabic support, advanced analytics, and a privacy-first design.</p>
+                <p><a href="./mizan/">View Privacy Policy</a></p>
+            </div>
+        </div>
 
-    <h2 style="text-align: right; margin-top: 40px;">تطبيقاتي</h2>
+        <!-- ARABIC COLUMN -->
+        <div class="col-ar">
+            <h1>سعد الشهري</h1>
+            <p>أقوم ببناء تطبيقات iOS.</p>
+            <p>للتواصل: <a href="mailto:saadalshehri91@gmail.com">saadalshehri91@gmail.com</a></p>
 
-    <div class="app-card">
-        <h2>ميزان: لياقة وصحة</h2>
-        <p>تطبيق لياقة بدنية متميز يدعم اللغة العربية بالكامل، ويوفر تحليلات متقدمة، مع تصميم يضع الخصوصية أولاً.</p>
-        <p><a href="./mizan/">عرض سياسة الخصوصية</a></p>
+            <h2 style="margin-top: 30px;">تطبيقاتي</h2>
+            <div class="app-card">
+                <h2>ميزان: لياقة وصحة</h2>
+                <p>تطبيق لياقة بدنية متميز يدعم اللغة العربية بالكامل، ويوفر تحليلات متقدمة، مع تصميم يضع الخصوصية أولاً.</p>
+                <p><a href="./mizan/">عرض سياسة الخصوصية</a></p>
+            </div>
+        </div>
     </div>
 </body>
 </html>
